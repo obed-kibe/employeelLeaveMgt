@@ -60,3 +60,14 @@ export const deleteUser = async (id: number) => {
   .query("DELETE FROM users WHERE staffid=@id");
   return { message: "User has been deleted successfully" };
 };
+
+export const getUserbyEmail = async (email: string): Promise<User| null> => {
+      const pool = await getPool();
+      const result = await pool
+      .request()
+      .input('email',email)
+      .query('SELECT * FROM users WHERE email = @email')
+      
+  
+    return result.recordset[0] || null;
+}

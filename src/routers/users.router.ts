@@ -8,6 +8,7 @@ const userroutes = (app:Express) => {
     app.get('/users/:id', userController.getUserById)
     app.put('/users/:id', userController.updateUser)
     app.delete('/users/:id', userController.deleteUser)
+    app.post('/login',userController.loginUser)
 }
 
 export default userroutes;
