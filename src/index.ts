@@ -2,6 +2,7 @@ import express from 'express'
 import { getPool } from './db/config';
 import dotenv from 'dotenv';
 import leaverequestroutes from './routers/leaverequest.router';
+import userroutes from './routers/users.router';
 
 
 dotenv.config();
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
 });
 
 leaverequestroutes(app)
+userroutes(app)
 
 const port = process.env.PORT;
 app.listen(port, () => {

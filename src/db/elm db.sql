@@ -1,3 +1,6 @@
+
+
+
 -- USERS TABLE
 CREATE TABLE users (
     staffid INT PRIMARY KEY NOT NULL,
@@ -49,6 +52,8 @@ VALUES
 (1896,'Carol Lee', 'carol@company.com', 'hashedpassword', 'Employee'),
 (1226,'David Kim', 'david@company.com', 'hashedpassword', 'Employee'),
 (3122,'Emily Clark', 'emily@company.com', 'hashedpassword', 'Employee');
+
+
 
 INSERT INTO leavetype (leavetype, annuallimit, description) 
 VALUES
