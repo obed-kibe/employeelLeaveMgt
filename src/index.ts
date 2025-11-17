@@ -3,6 +3,7 @@ import { getPool } from './db/config';
 import dotenv from 'dotenv';
 import leaverequestroutes from './routers/leaverequest.router';
 import userroutes from './routers/users.router';
+import commentsrouters from './routers/comments.routers';
 
 
 dotenv.config();
@@ -17,6 +18,7 @@ app.get('/', (req, res) => {
 
 leaverequestroutes(app)
 userroutes(app)
+commentsrouters(app)
 
 const port = process.env.PORT;
 app.listen(port, () => {
