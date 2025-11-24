@@ -4,12 +4,16 @@ import dotenv from 'dotenv';
 import leaverequestroutes from './routers/leaverequest.router';
 import userroutes from './routers/users.router';
 import commentsrouters from './routers/comments.routers';
-
+import cors from 'cors'
 
 dotenv.config();
 const app = express();
 
 app.use(express.json()); 
+app.use(cors({
+    origin: "https://elms-woad.vercel.app",
+    methods: ["GET","POST","PUT", "DELETE"],
+}))
 
 
 app.get('/', (req, res) => {

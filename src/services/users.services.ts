@@ -94,9 +94,9 @@ export const loginUser = async (email: string, password: string) => {
 
     // 5. Return token + user details (without password)
     return {
-        message: 'Login successful; Welcome to your Dashboard',
+        message: 'Login successful',
         token,
-        customer: {
+        user: {
            Staffid: user.staffid,
             Email: user.email,
             Username: user.username,
